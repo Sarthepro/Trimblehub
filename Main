@@ -1,0 +1,53 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("TrimbleHub", "BloodTheme")
+
+local Tab = Window:NewTab("Admin")
+local AdminSection = Tab:NewSection("Admin")
+AdminSection:NewButton("Infinite Yield", "Execute the infinite yield script.", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+AdminSection:NewButton("Adonis FE", "From an classic admin commands model to an great fe admin.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/MQ3wc7Zq", true))()
+end)
+
+AdminSection:NewButton("Reviz Admin", "An admin script with an easy to find command bar.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/Caniwq2N'))()
+end)
+
+local Tab = Window:NewTab("Player")
+local PlayerSection = Tab:NewSection("Player")
+PlayerSection:NewSlider("Walkspeed", "Set your speed.", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+PlayerSection:NewSlider("Jumppower", "How high can you jump?", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+PlayerSection:NewToggle("Superhuman", "Jump super high and go very fast.", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+local Tab = Window:NewTab("Keybinds")
+local ConfigSection = Tab:NewSection("Config")
+ConfigSection:NewKeybind("Toggle UI", "Tired of the ui? Press your set keybind to toggle it! Default is F.", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+local Tab = Window:NewTab("Games")
+local PrisonSection = Tab:NewSection("PrisonLife")
+PrisonSection:NewButton("Open Gate", "Opens the prison gate.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Sarthepro/gate/main/Main'))()
+end)
+
+
+local Tab = Window:NewTab("Credits")
+local CreditsSection = Tab:NewSection("Credits")
+CreditsSection:NewLabel("UnseenFilms | Everything")
+
