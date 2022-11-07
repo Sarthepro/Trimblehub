@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("TrimbleHub", "BloodTheme")
+local Window = Library.CreateLib("TrimbleHub", "Ocean")
 
 local Tab = Window:NewTab("Admin")
 local AdminSection = Tab:NewSection("Admin")
