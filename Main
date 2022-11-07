@@ -51,4 +51,3 @@ local Tab = Window:NewTab("Credits")
 local CreditsSection = Tab:NewSection("Credits")
 CreditsSection:NewLabel("UnseenFilms | Everything")
 CreditsSection:NewLabel("UI | Kavo UI Library")
-
